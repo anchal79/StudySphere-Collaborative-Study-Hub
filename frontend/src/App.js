@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (token) {
       try {
-        const decoded = jwt_decode(token);
+        const decoded = jwtDecode(token);
         if (decoded.exp * 1000 > Date.now()) {
           // Token is valid, get user info from token or make API call
           const userData = JSON.parse(localStorage.getItem("user") || "{}");
