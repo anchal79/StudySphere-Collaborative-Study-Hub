@@ -694,7 +694,7 @@ const StudyRoom = ({ roomId }) => {
 };
 
 const StudyRoomWrapper = () => {
-  const { roomId } = React.useContext(React.createContext());
+  const { roomId } = useParams();
   return <StudyRoom roomId={roomId} />;
 };
 
